@@ -1,0 +1,63 @@
+// Importing the ArrayList class from the java.util package.
+import java.util.ArrayList;
+
+// Defining a class named "Account" to represent a bank account.
+public class Account {
+
+    // Private member variables to store account details.
+    private String name;            // Account holder's name
+    private String accountNumber;   // Unique account number
+    private double balance;         // Current balance in the account
+
+    // Constructor to initialize the account with the provided details.
+    public Account(String name, String accountNumber, double balance) {
+        this.name = name;
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    // Getter method to retrieve the account holder's name.
+    public String getName() {
+        return name;
+    }
+
+    // Setter method to set the account holder's name.
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    // Getter method to retrieve the account number.
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    // Setter method to set the account number.
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    // Getter method to retrieve the current balance.
+    public double getBalance() {
+        return balance;
+    }
+
+    // Setter method to set the current balance.
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    // Method to deposit money into the account.
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    // Method to withdraw money from the account.
+    public void withdraw(double amount) {
+        balance -= amount;
+    }
+
+    // Method to retrieve a formatted string containing account information.
+    public String getAccountInfo() {
+        return "Name: " + name + ", Account Number: " + accountNumber + ", Balance: " + balance;
+    }
+}
