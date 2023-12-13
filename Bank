@@ -1,0 +1,39 @@
+// Importing the ArrayList class from the java.util package.
+import java.util.ArrayList;
+
+// Defining a class named "Bank" to represent a bank entity.
+public class Bank {
+
+    // Declaring a private ArrayList to store a collection of Account objects.
+    private ArrayList<Account> accounts;
+
+    // Constructor for the Bank class, initializing the accounts ArrayList.
+    public Bank() {
+        accounts = new ArrayList<Account>(); //connected to the class
+    }
+
+    // Method to add an account to the bank's collection.
+    public void addAccount(Account account) {
+        accounts.add(account);
+    }
+
+    // Method to remove an account from the bank's collection.
+    public void removeAccount(Account account) {
+        accounts.remove(account);
+    }
+
+    // Method to deposit money into a specified account.
+    public void depositMoney(Account account, double amount) {
+        account.deposit(amount);
+    }
+
+    // Method to withdraw money from a specified account.
+    public void withdrawMoney(Account account, double amount) {
+        account.withdraw(amount);
+    }
+
+    // Method to retrieve the list of accounts in the bank.
+    public ArrayList<Account> getAccounts() {
+        return accounts;
+    }
+}
